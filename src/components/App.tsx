@@ -7,6 +7,7 @@ import theme from "../styles/theme";
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const TweetsPage = lazy(() => import("../pages/TweetsPage/TweetsPage"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tweets" element={<TweetsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </ThemeProvider>
