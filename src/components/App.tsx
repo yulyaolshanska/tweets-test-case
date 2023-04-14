@@ -16,7 +16,7 @@ export const App: React.FC = () => {
       <Suspense fallback={<div>Loader</div>}>
         <Routes>
           <Route path="/" element={<HomePage />}>
-            <Route path="/tweets" element={<TweetsPage />} />
+            <Route path="tweets" element={<TweetsPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
