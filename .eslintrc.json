@@ -28,7 +28,7 @@
     "indent": "off",
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double", { "allowTemplateLiterals": true }],
-    "semi": ["error", "always"],
+    // "semi": ["error", "always"],
     "no-mixed-spaces-and-tabs": "off"
   }
 }
