@@ -4,6 +4,10 @@ import { ReactComponent as LogoImg } from "../../img/logo.svg";
 import { ReactComponent as Ellipse } from "../../img/ellipse.svg";
 import { ReactComponent as Rectangle } from "../../img/rectangle.svg";
 
+interface FollowButtonProps {
+  active?: boolean;
+}
+
 export const TweetItem = styled.li`
   position: relative;
   display: flex;
@@ -11,6 +15,10 @@ export const TweetItem = styled.li`
   align-items: center;
   width: 380px;
   padding: 28px 36px 36px 36px;
+  overflow: hidden;
+  /* &:not(:last-child) {
+    margin-right: 48px;
+  } */
   background: url(${BackgroundImg}),
     linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
   background-repeat: no-repeat;
@@ -42,7 +50,9 @@ export const AvatarRectangle = styled(Rectangle)`
 export const Avatar = styled.img`
   position: absolute;
   top: 187px;
-  left: 163px;
+  left: 164px;
+  width: 62px;
+  height: 62px;
   z-index: 10;
   border-radius: 50%;
   background-color: #5736a3;
@@ -71,7 +81,7 @@ export const FollowersCount = styled.p`
   color: #ebd8ff;
 `;
 
-export const FollowButton = styled.button`
+export const FollowButton = styled.button<FollowButtonProps>`
   padding: 14px;
   text-align: center;
   text-transform: uppercase;
@@ -79,7 +89,7 @@ export const FollowButton = styled.button`
   font-size: 18px;
   line-height: 1.22;
   color: #373737;
-  background: #ebd8ff;
+  background: ${(p: FollowButtonProps) => (p.active ? "#5CD3A8" : "#ebd8ff")};
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   cursor: pointer;
