@@ -9,7 +9,7 @@ const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const TweetsPage = lazy(() => import("../pages/TweetsPage/TweetsPage"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
 
-function App() {
+export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -22,6 +22,6 @@ function App() {
       </Suspense>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
