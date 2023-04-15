@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# GoIt-test-case
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## https://tweets-test-case.netlify.app
 
-## Available Scripts
+  ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm i`
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Used technologies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJS
+- TypeScript
+- Redux
+- RTK Query
+- Styled components
 
-### `npm run eject`
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40"         height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" **alt="TypeScript" width="40"   height="40"/>&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" title="Redux" alt="Redux " width="40" height="40"/>&nbsp;
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Маршрутизація**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **_/_** - публічний-необмежений, переадресує на сторінку **_Home_**
+- **_/tweets_** - публічний-необмежений, переадресує на сторінку **_TweetsPage_**,
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Детально про сторінки:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. При клікові на кнопку Follow - текст змінюється на Following. Також
+змінюється колір кнопки. А до кількості фоловерів додається і ваш. Тобто,
+початкова кількість складає 100,500 фоловерів. При клікові на кнопку буде
+100,501.
+2. При оновлені сторінки має фіксуватись кінцевий результат дій юзера. Тобто,
+якщо клікнути по кнопці і оновити сторінку - то кнопка все рівно залишається
+в стані Following із відповідним кольором, а кількість фоловерів НЕ
+зменшується до початкового значення.
+3. При повторному клікові на кнопку її текст та колір змінюються до початкового
+стану. Також змінюється і кількість фоловерів.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
