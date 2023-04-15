@@ -35,6 +35,7 @@ export const HomeText = styled.p`
 
 export const TweetsLink = styled(NavLink)`
   padding: 20px;
+  margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
