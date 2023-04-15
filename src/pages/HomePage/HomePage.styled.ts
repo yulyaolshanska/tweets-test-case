@@ -22,15 +22,16 @@ export const Title = styled.h1`
   margin-bottom: 20px;
   font-size: 42px;
   font-weight: 700;
-  color: #ebd8ff;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  color: #eae5ee;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.7);
 `;
 
 export const HomeText = styled.p`
   font-size: 32px;
+  font-weight: 600;
   margin-bottom: 20px;
-  color: #ebd8ff;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  color: #eae5ee;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.7);
 `;
 
 export const TweetsLink = styled(NavLink)`
