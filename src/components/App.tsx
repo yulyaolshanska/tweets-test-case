@@ -15,9 +15,8 @@ export const App: React.FC = () => {
       <GlobalStyle />
       <Suspense fallback={<div>Loader</div>}>
         <Routes>
-          <Route path="/" element={<HomePage />}>
-            <Route path="tweets" element={<TweetsPage />} />
-          </Route>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/tweets" element={<TweetsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
