@@ -93,4 +93,8 @@ export const FollowButton = styled.button<FollowButtonProps>`
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
