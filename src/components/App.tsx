@@ -4,6 +4,7 @@ import GlobalStyle from "../styles/globalStyle";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import theme from "../styles/theme";
+import Loader from "./Loader/Loader";
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const TweetsPage = lazy(() => import("../pages/TweetsPage/TweetsPage"));
@@ -13,7 +14,7 @@ export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Suspense fallback={<div>Loader</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tweets" element={<TweetsPage />} />
