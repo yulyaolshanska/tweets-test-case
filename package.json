@@ -1,6 +1,5 @@
 {
   "name": "tweets",
-  "homepage": "https://yulyaolshanska.github.io/tweets-test-case/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
