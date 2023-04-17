@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktweets=self.webpackChunktweets||[]).push([[343],{1343:function(e,s,t){t(2791);s.Z=t.p+"static/media/background.1a865da81713d8fe36d828178a9c9762.svg"}}]);
-//# sourceMappingURL=343.dbae14fc.chunk.js.map
