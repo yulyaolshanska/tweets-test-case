@@ -1,4 +1,9 @@
 const theme = {
+  colors: {
+    backgroundBtn: "#5CD3A8",
+    backgroundActiveBtn: "#ebd8ff",
+    accent: "#6648c8",
+  },
   media: {
     mobile: "(min-width: 320px)",
     mobileM: "(max-width: 767px)",

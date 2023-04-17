@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import GoogleButton from "react-google-button";
 import { signInWithGoogle } from "../../firebase/firebase";
+import firebase from "../../firebase/firebase";
 import {
   ButtonBox,
   Container,
@@ -9,28 +9,53 @@ import {
   Title,
   TweetsLink,
 } from "./HomePage.styled";
-import { useAppSelector } from "hooks/hooks";
+import { useAppDispatch } from "hooks/hooks";
+import { authSlice } from "redux/authSlice";
+
+interface User {
+  userName: string | null;
+  userEmail: string | null;
+}
 
 const HomePage: React.FC = () => {
-  const navigate = useNavigate();
-  const userName = useAppSelector(({ auth }) => auth.user.userName);
+  const { logIn } = authSlice.actions;
+  const [user, setUser] = useState<User | "">("");
+  const dispatch = useAppDispatch();
+  let currentUser = null;
+  const userGreating = user
+    ? `${user?.userName}, welcome to Tweets!`
+    : " Welcome to Tweets!";
 
   useEffect(() => {
-    if (userName !== "") {
-      navigate("/tweets", { replace: true });
+    if (user) {
+      dispatch(logIn(user));
     }
-  }, [userName]);
+  }, [user]);
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user !== null) {
+        currentUser = {
+          userName: user?.displayName,
+          userEmail: user?.email,
+        };
+        setUser(currentUser);
+      }
+    });
+  }, []);
 
   return (
     <Container>
-      <Title>Welcome to Tweets!</Title>
+      <Title>{userGreating}</Title>
       <HomeText>To start viewing new users, click the button below</HomeText>
       <TweetsLink to="/tweets">View users</TweetsLink>
-      <ButtonBox>
-        <GoogleButton onClick={signInWithGoogle}>
-          Sign in with google
-        </GoogleButton>
-      </ButtonBox>
+      {!user && (
+        <ButtonBox>
+          <GoogleButton onClick={signInWithGoogle}>
+            Sign in with google
+          </GoogleButton>
+        </ButtonBox>
+      )}
     </Container>
   );
 };

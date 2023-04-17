@@ -8,8 +8,7 @@ export const Container = styled.div`
 
 export const BackButton = styled.button`
   display: flex;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin: 20px 0 30px 30px;
   width: 130px;
   border: none;
   background-color: transparent;

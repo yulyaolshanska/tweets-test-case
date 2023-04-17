@@ -1,8 +1,7 @@
 import React, { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/globalStyle";
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import theme from "../styles/theme";
 import Loader from "./Loader/Loader";
 

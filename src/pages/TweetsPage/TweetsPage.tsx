@@ -1,3 +1,4 @@
+import { Header } from "components/Header/Header";
 import React from "react";
 import { TweetsList } from "../../components/TweetsList/TweetsList";
 import {
@@ -10,6 +11,7 @@ import {
 const TweetsPage: React.FC = () => {
   return (
     <Container>
+      <Header />
       <BackButton>
         <StyledNavLink to="/">
           <StyledGoBAckIcon />
