@@ -28,12 +28,12 @@ export const Container = styled.div<ThemeProps>`
     width: 768px;
   }
   @media screen and (min-width: 940px) {
-    width: 940px;
+    width: 100%;
   }
   @media ${(p: ThemeProps) => p.theme.media.desktop} {
     margin-left: auto;
     margin-right: auto;
-    width: 1060px;
+    width: 1280px;
   }
 `;
 

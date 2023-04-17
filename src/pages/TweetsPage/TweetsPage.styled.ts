@@ -2,8 +2,31 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { IoArrowBackSharp } from "react-icons/io5";
 
+interface ThemeProps {
+  theme: {
+    media: {
+      tablet: string;
+      desktop: string;
+    };
+  };
+}
+
 export const Container = styled.div`
-  padding: 40px;
+  padding: 0 30px 40px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  @media ${(p: ThemeProps) => p.theme.media.tablet} {
+    width: 768px;
+  }
+  @media screen and (min-width: 940px) {
+    width: 940px;
+  }
+  @media ${(p: ThemeProps) => p.theme.media.desktop} {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+  }
 `;
 
 export const BackButton = styled.button`
